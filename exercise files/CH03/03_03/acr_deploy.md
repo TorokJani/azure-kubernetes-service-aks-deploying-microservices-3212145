@@ -5,7 +5,9 @@ acr_name=acr$RANDOM
 az acr create --resource-group $resource_group --location $location --name $acr_name --sku Standard
 
 # Update aks to integrate with acr
+aks_cluster_name=aks-cluster-01
 az aks update --name $aks_cluster_name --resource-group $resource_group --attach-acr $acr_name
 
 # If az aks update command fails to run, ensure to first run the “az aks get-credentials” then rerun the update the cluster.
+
 az aks get-credentials --resource-group $resource_group --name $aks_cluster_name

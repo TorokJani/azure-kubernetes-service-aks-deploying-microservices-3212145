@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: ui--env
-          image: acr6543.azurecr.io/ui:v1.0
+          image: acr27699.azurecr.io/ui:v1.0
           resources:
             requests:
               cpu: 250m

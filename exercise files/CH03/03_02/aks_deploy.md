@@ -1,7 +1,7 @@
 # Create a resource group and location variable
 
 resource_group=aks-rg
-location=eastus
+location=swedencentral
 
 # For our virtual network, let’s define the following variables
 vnet_name=aks-vnet
@@ -29,6 +29,8 @@ subnet_id=$(az network vnet subnet show --resource-group $resource_group --vnet-
 
 # get aks version that's not a preview version
 aks_version=$(az aks get-versions --location $location --query 'orchestrators[?!isPreview] | [-1].orchestratorVersion'  --output tsv)
+
+aks_version=$(az aks get-versions --location $location --query 'values[?!isPreview] | [1].version' --output tsv)
 
 
 # create a user managed identity before cluster creation

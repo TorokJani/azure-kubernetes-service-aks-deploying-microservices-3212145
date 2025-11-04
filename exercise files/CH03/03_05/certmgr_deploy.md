@@ -20,7 +20,7 @@ metadata:
 spec:
   acme:
     server: https://acme-staging-v02.api.letsencrypt.org/directory
-    email: validemail@emaildomain.com # IMPORTANT: Replace with a valid email
+    email: torokjanos@gmail.com # IMPORTANT: Replace with a valid email
     privateKeySecretRef:
       name: letsencrypt-staging
     solvers:
